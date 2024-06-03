@@ -21,7 +21,7 @@ const useGeneratePodcast = ({
     const [isGenerating, setIsGenerating] = useState(false);
     const { toast } = useToast();
 
-    const generateUploadUrl = useMutation(api.file.generateUploadUrl);
+    const generateUploadUrl = useMutation(api.files.generateUploadUrl);
     const { startUpload } = useUploadFiles(generateUploadUrl);
 
     const getPodcastAudio = useAction(api.openai.generateAudioAction);
